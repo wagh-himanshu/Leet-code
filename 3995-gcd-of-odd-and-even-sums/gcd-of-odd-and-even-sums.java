@@ -11,9 +11,11 @@ class Solution {
         
         // 2. Standard Euclidean algorithm for GCD
         while (sumEven != 0) {
-            int temp = sumEven;
-            sumEven = sumOdd % sumEven;
-            sumOdd = temp;
+            if(sumOdd > sumEven){
+                sumOdd = sumOdd - sumEven;
+            }else{
+                sumEven = sumEven - sumOdd;
+            }
         }
         
         return sumOdd; 
