@@ -1,7 +1,7 @@
 class Solution {
     public int maxProfit(int[] prices) {
-        // Edge case: if there are no prices or only one day, no profit can be made
-        if (prices == null || prices.length <= 1) {
+       
+        if (prices.length <= 1) {
             return 0;
         }
         
@@ -13,7 +13,6 @@ class Solution {
             if (prices[i] < minPrice) {
                 minPrice = prices[i];
             } 
-            
             else if (prices[i] - minPrice > maxProfit) {
                 maxProfit = prices[i] - minPrice;
             }
